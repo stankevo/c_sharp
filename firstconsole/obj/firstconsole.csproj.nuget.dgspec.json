@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/elena/repo/c_sharp/c_sharp/firstconsole/firstconsole.csproj": {}
+  },
+  "projects": {
+    "/Users/elena/repo/c_sharp/c_sharp/firstconsole/firstconsole.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/elena/repo/c_sharp/c_sharp/firstconsole/firstconsole.csproj",
+        "projectName": "firstconsole",
+        "projectPath": "/Users/elena/repo/c_sharp/c_sharp/firstconsole/firstconsole.csproj",
+        "packagesPath": "/Users/elena/.nuget/packages/",
+        "outputPath": "/Users/elena/repo/c_sharp/c_sharp/firstconsole/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/elena/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

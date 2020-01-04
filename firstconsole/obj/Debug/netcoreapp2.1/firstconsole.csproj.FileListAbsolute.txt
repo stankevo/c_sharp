@@ -1,0 +1,11 @@
+/Users/elena/repo/c_sharp/c_sharp/firstconsole/obj/Debug/netcoreapp2.1/firstconsole.csprojAssemblyReference.cache
+/Users/elena/repo/c_sharp/c_sharp/firstconsole/obj/Debug/netcoreapp2.1/firstconsole.csproj.CoreCompileInputs.cache
+/Users/elena/repo/c_sharp/c_sharp/firstconsole/obj/Debug/netcoreapp2.1/firstconsole.AssemblyInfoInputs.cache
+/Users/elena/repo/c_sharp/c_sharp/firstconsole/obj/Debug/netcoreapp2.1/firstconsole.AssemblyInfo.cs
+/Users/elena/repo/c_sharp/c_sharp/firstconsole/bin/Debug/netcoreapp2.1/firstconsole.deps.json
+/Users/elena/repo/c_sharp/c_sharp/firstconsole/bin/Debug/netcoreapp2.1/firstconsole.runtimeconfig.json
+/Users/elena/repo/c_sharp/c_sharp/firstconsole/bin/Debug/netcoreapp2.1/firstconsole.runtimeconfig.dev.json
+/Users/elena/repo/c_sharp/c_sharp/firstconsole/bin/Debug/netcoreapp2.1/firstconsole.dll
+/Users/elena/repo/c_sharp/c_sharp/firstconsole/bin/Debug/netcoreapp2.1/firstconsole.pdb
+/Users/elena/repo/c_sharp/c_sharp/firstconsole/obj/Debug/netcoreapp2.1/firstconsole.dll
+/Users/elena/repo/c_sharp/c_sharp/firstconsole/obj/Debug/netcoreapp2.1/firstconsole.pdb
