@@ -1,0 +1,11 @@
+/Users/elena/repo/c_sharp/c_sharp/C# Essential training part 1/2 - Getting started/UnderstandingSyntax/bin/Debug/netcoreapp2.1/UnderstandingSyntax.deps.json
+/Users/elena/repo/c_sharp/c_sharp/C# Essential training part 1/2 - Getting started/UnderstandingSyntax/bin/Debug/netcoreapp2.1/UnderstandingSyntax.runtimeconfig.json
+/Users/elena/repo/c_sharp/c_sharp/C# Essential training part 1/2 - Getting started/UnderstandingSyntax/bin/Debug/netcoreapp2.1/UnderstandingSyntax.runtimeconfig.dev.json
+/Users/elena/repo/c_sharp/c_sharp/C# Essential training part 1/2 - Getting started/UnderstandingSyntax/bin/Debug/netcoreapp2.1/UnderstandingSyntax.dll
+/Users/elena/repo/c_sharp/c_sharp/C# Essential training part 1/2 - Getting started/UnderstandingSyntax/bin/Debug/netcoreapp2.1/UnderstandingSyntax.pdb
+/Users/elena/repo/c_sharp/c_sharp/C# Essential training part 1/2 - Getting started/UnderstandingSyntax/obj/Debug/netcoreapp2.1/UnderstandingSyntax.csprojAssemblyReference.cache
+/Users/elena/repo/c_sharp/c_sharp/C# Essential training part 1/2 - Getting started/UnderstandingSyntax/obj/Debug/netcoreapp2.1/UnderstandingSyntax.csproj.CoreCompileInputs.cache
+/Users/elena/repo/c_sharp/c_sharp/C# Essential training part 1/2 - Getting started/UnderstandingSyntax/obj/Debug/netcoreapp2.1/UnderstandingSyntax.AssemblyInfoInputs.cache
+/Users/elena/repo/c_sharp/c_sharp/C# Essential training part 1/2 - Getting started/UnderstandingSyntax/obj/Debug/netcoreapp2.1/UnderstandingSyntax.AssemblyInfo.cs
+/Users/elena/repo/c_sharp/c_sharp/C# Essential training part 1/2 - Getting started/UnderstandingSyntax/obj/Debug/netcoreapp2.1/UnderstandingSyntax.dll
+/Users/elena/repo/c_sharp/c_sharp/C# Essential training part 1/2 - Getting started/UnderstandingSyntax/obj/Debug/netcoreapp2.1/UnderstandingSyntax.pdb
