@@ -4,17 +4,17 @@ using System.Text;
 
 namespace SchoolLibrary
 {
-    class School
+    public class School
     {
-        string Name { get; set; }
-        string Address { get; set; }
-        string City { get; set; }
-        string State { get; set; }
-        string Zip { get; set; }
-        string PhoneName { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Zip { get; set; }
+        public string PhoneName { get; set; }
 
-        string _twitterAddress;
-        string TwitterAddress
+        private string _twitterAddress;
+        public string TwitterAddress
         {
             get { return _twitterAddress; }
             set
