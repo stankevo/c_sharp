@@ -55,5 +55,21 @@ namespace SchoolLibrary
 
         // Function bodied expression
         public static double AverageThreeScores (double a, double b, double c) => ( a + b + c ) / 3;
+
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine(Name);
+            sb.AppendLine(Address);
+            sb.AppendLine(City);
+            sb.Append(", ");
+            sb.Append(State);
+            sb.Append("  ");
+            sb.Append(Zip);
+            sb.AppendLine(PhoneNumber);
+            sb.AppendLine(TwitterAddress);
+            
+            return sb.ToString();
+        }
     }
 }
