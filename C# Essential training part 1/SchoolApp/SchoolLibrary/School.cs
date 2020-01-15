@@ -52,5 +52,8 @@ namespace SchoolLibrary
             var res = ( a + b + c ) / 3;
             return res;
         }
+
+        // Function bodied expression
+        public double AverageThreeScores (double a, double b, double c) => ( a + b + c ) / 3;
     }
 }
