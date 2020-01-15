@@ -11,7 +11,7 @@ namespace SchoolLibrary
         public string City { get; set; }
         public string State { get; set; }
         public string Zip { get; set; }
-        public string PhoneName { get; set; }
+        public string PhoneNumber { get; set; }
 
         private string _twitterAddress;
         public string TwitterAddress
@@ -27,6 +27,18 @@ namespace SchoolLibrary
                     throw new Exception("The twitter address should start with @.");
                 }
             }
+        }
+
+        public School()
+        {
+            Name = "Untitled School";
+            PhoneNumber = "555-1234"; 
+        }
+
+        public School(string SchoolName, string SchoolPhoneNumber)
+        {
+            Name = SchoolName;
+            PhoneNumber = SchoolPhoneNumber;
         }
     }
 }
