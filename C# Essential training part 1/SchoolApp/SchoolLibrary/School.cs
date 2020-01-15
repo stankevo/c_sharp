@@ -41,19 +41,19 @@ namespace SchoolLibrary
             PhoneNumber = SchoolPhoneNumber;
         }
 
-        public float AverageThreeScores(float a, float b, float c)
+        public static float AverageThreeScores(float a, float b, float c)
         {
             var res = ( a + b + c ) / 3;
             return res;
         }
 
-        public int AverageThreeScores(int a, int b, int c)
+        public static int AverageThreeScores(int a, int b, int c)
         {
             var res = ( a + b + c ) / 3;
             return res;
         }
 
         // Function bodied expression
-        public double AverageThreeScores (double a, double b, double c) => ( a + b + c ) / 3;
+        public static double AverageThreeScores (double a, double b, double c) => ( a + b + c ) / 3;
     }
 }
