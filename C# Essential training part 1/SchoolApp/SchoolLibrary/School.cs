@@ -40,5 +40,17 @@ namespace SchoolLibrary
             Name = SchoolName;
             PhoneNumber = SchoolPhoneNumber;
         }
+
+        public float AverageThreeScores(float a, float b, float c)
+        {
+            var res = ( a + b + c ) / 3;
+            return res;
+        }
+
+        public int AverageThreeScores(int a, int b, int c)
+        {
+            var res = ( a + b + c ) / 3;
+            return res;
+        }
     }
 }
