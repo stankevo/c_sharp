@@ -66,9 +66,20 @@ namespace SchoolFormsApp
         private void button1_Click(object sender, EventArgs e)
         {
             var testSchool = new School();
-            testSchool.Name = "Central City High";
-            //testSchool.TwitterAddress = "@CentralCityHigh";
-            testSchool.TwitterAddress = "wrong twitter";
+            testSchool.Name = txtName.Text;
+            testSchool.Address = txtAddress.Text;
+            testSchool.City = txtCity.Text;
+            testSchool.State = txtState.Text;
+            testSchool.Zip = txtZip.Text;
+            testSchool.PhoneNumber = txtPhone.Text;
+            try
+            {
+                testSchool.TwitterAddress = txtTwitterAddress.Text;
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }
