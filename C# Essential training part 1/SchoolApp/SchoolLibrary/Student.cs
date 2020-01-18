@@ -14,5 +14,13 @@ namespace SchoolLibrary
             // fix the implementation later
             return 4.0f;
         }
+
+        public override string SendMessage(string message)
+        {
+            var initialMessage = base.SendMessage(message);
+            var sb = new StringBuilder(initialMessage);
+            sb.AppendLine("This message is private and confidential.");
+            return sb.ToString();
+        }
     }
 }
