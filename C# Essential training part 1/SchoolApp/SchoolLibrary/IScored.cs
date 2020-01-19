@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SchoolLibrary
 {
-    public interface IScore
+    public interface IScored
     {
         float Score { get; set; }
         float MaximumScore { get; set; }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SchoolLibrary
 {
-    public class ScienceExperiment : IScore
+    public class ScienceExperiment : IScored
     {
         public string Hypothesis { get; set; }
         public string Materials { get; set; }
