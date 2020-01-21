@@ -6,5 +6,6 @@ namespace SchoolLibrary.Elementary
 {
     class Volume
     {
+        int testNum;
     }
 }
