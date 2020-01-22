@@ -13,11 +13,11 @@ namespace UnitTestProject1
         public SimpleArray()
         {
             GroceryList = new string[4] { "Milk", "Bread", "Eggs", "Cheese" };
+        }
 
         public override string ToString()
         {
             return "The grocery list contains " + GroceryList.Length + " items: " + GroceryList.ToString();
         }
-    }
     }
 }
