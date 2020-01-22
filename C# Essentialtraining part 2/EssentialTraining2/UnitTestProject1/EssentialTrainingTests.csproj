@@ -48,7 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SimpleArray.cs" />
+    <Compile Include="SimpleArrayTest.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LearnUnitTests\LearnUnitTests.csproj">
+    <ProjectReference Include="..\LearnUnitTests\EssentialTraining2.csproj">
       <Project>{0858fc8b-3edc-42ef-8eaa-3512c53bb1f3}</Project>
-      <Name>LearnUnitTests</Name>
+      <Name>EssentialTraining2</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

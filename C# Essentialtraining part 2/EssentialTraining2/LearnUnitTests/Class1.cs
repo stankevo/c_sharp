@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LearnUnitTests
+namespace EssentialTraining2
 {
     public class Class1
     {

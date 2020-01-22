@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnitTestProject1
+namespace EssentialTraining2
 {
-    class SimpleArray
+    public class SimpleArray
     {
         public string[] GroceryList;
 
