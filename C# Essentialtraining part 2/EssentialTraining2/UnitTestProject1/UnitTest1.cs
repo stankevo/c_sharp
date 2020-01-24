@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using EssentialTraining2;
 
-namespace UnitTestProject1
+namespace EssentialTrainingTests
 {
     [TestClass]
     public class UnitTest1
