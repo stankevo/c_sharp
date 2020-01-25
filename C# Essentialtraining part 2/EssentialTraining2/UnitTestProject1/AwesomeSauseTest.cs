@@ -13,7 +13,7 @@ namespace EssentialTrainingTests
             var testInstance = new AwesomeSaucse();
             testInstance.Sauces.Add("Tobasco");
             testInstance.Sauces.Add("Cholula");
-            testInstance.Sauces.Add("Trailer Trash");
+            testInstance.Sauces.Add("Traile r Trash");
 
             //expect true
             Assert.IsTrue(testInstance.IsAwesomeSouce("Trailer Trash"));
