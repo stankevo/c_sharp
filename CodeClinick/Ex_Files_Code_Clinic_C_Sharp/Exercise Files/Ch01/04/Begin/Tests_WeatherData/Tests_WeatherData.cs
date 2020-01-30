@@ -40,10 +40,12 @@ namespace Tests_WeatherData
 
             var tryParseOutcome = false; // TODO: Implement the TryParse method
 
+            tryParseOutcome = WeatherObservation.TryParse(text, out WeatherObservation wo);
+
             Check.That(tryParseOutcome).IsTrue();
 
-            //Check.That(wo.TimeStamp).IsEqualTo(new DateTime(2012, 01, 01, 00, 02, 14));
-            //Check.That(wo.Barometric_Pressure).IsCloseTo(30.5, 0.01);
+            Check.That(wo.TimeStamp).IsEqualTo(new DateTime(2012, 01, 01, 00, 02, 14));
+            Check.That(wo.Barometric_Pressure).IsCloseTo(30.5, 0.01);
         }
 
         [TestMethod]
