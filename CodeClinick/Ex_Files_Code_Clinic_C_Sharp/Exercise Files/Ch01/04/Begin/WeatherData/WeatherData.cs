@@ -16,10 +16,27 @@ namespace Weather
         {
             throw new NotImplementedException();
         }
-
+          
         public static IEnumerable<WeatherObservation> ReadAll(TextReader text, Action<string> errorHandler = null)
         {
-            throw new NotImplementedException();
+            string line = text.ReadLine();
+            while (line != null)
+            {
+                var lineParsed = WeatherObservation.TryParse(line, out WeatherObservation wo);
+                if (lineParsed)
+                {
+                    yield return wo;
+                }
+                else
+                {
+                    try
+                    {
+                        errorHandler?.Invoke("Could not parse the line " + line);
+                    }
+                    catch { }
+                } 
+                line = text.ReadLine();
+            }
         }
     }
 }

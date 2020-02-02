@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ErrorHandlerClass.cs" />
     <Compile Include="WeatherData.cs" />
     <Compile Include="WeatherObservation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

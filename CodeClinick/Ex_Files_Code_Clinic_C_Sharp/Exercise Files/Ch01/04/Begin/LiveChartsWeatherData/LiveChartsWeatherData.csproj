@@ -107,6 +107,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Tests_WeatherData\Tests_WeatherData.csproj">
+      <Project>{3ff8658a-eb0d-4fc4-a86e-54320a10f495}</Project>
+      <Name>Tests_WeatherData</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WeatherData\WeatherData.csproj">
       <Project>{971e7221-c564-43c5-8c46-531ede815399}</Project>
       <Name>WeatherData</Name>

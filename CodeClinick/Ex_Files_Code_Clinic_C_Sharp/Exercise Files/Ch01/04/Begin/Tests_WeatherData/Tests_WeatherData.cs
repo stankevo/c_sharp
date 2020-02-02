@@ -11,12 +11,13 @@ namespace Tests_WeatherData
     [TestClass]
     public class Tests_WeatherData
     {
-        private static string filename = @"..\..\..\..\..\pond_data\Environmental_Data_Deep_Moor_2012.txt";
+        //private static string filename = @"..\..\..\..\..\pond_data\Environmental_Data_Deep_Moor_2012.txt";
+        private static string filename = @"C:\Users\husey\Desktop\Lena\c_sharp\CodeClinick\Ex_Files_Code_Clinic_C_Sharp\Exercise Files\Ch01\pond_data\Environmental_Data_Deep_Moor_2012.txt";
 
         #region Sample Data
         private static string sampleData =
 @"date       time    	Air_Temp	Barometric_Press	Dew_Point	Relative_Humidity	Wind_Dir	Wind_Gust	Wind_Speed
-2012_01_01 00:02:14	34.30	30.50	26.90	74.20	346.40	11.00	 3.60
+2012!01_01 00:02:14	34.30	30.50	26.90	74.20	346.40	11.00	 3.60
 2012_01_01 00:08:29	34.10	30.50	26.50	73.60	349.00	12.00	 8.00
 2012_01_01 00:14:45	33.90	30.60	26.80	75.00	217.80	12.00	 9.20
 2012_01_01 00:21:00	33.80	30.60	27.30	76.60	280.80	17.00	14.00";
@@ -55,11 +56,9 @@ namespace Tests_WeatherData
             {
                 text.ReadLine(); // ignore 1st line of text, it contains headers.
 
-                // TODO: Implement WeatherData.ReadAll
+                var data = WeatherData.ReadAll(text, ErrorHandlerClass.SendErrorMessageToDebugConsole1);
 
-                // Check.That(data.Count()).IsEqualTo(4);
-
-                throw new NotImplementedException();
+                Check.That(data.Count()).IsEqualTo(4);
             }
         }
 
@@ -70,11 +69,9 @@ namespace Tests_WeatherData
             {
                 text.ReadLine(); // ignore 1st line of text, it contains headers.
 
-                //var data = WeatherData.ReadAll(text);
+                var data = WeatherData.ReadAll(text, ErrorHandlerClass.SendErrorMessageToDebugConsole1);
 
-                //Check.That(data.Count()).IsEqualTo(70675);
-
-                throw new NotImplementedException();
+                Check.That(data.Count()).IsEqualTo(70675);
             }
         }
 
@@ -91,7 +88,7 @@ namespace Tests_WeatherData
                 // TODO: Implement WeatherData.ReadRange
 
                 //Check.That(data.Count()).IsEqualTo(6);
-
+                 
                 throw new NotImplementedException();
             }
         }
