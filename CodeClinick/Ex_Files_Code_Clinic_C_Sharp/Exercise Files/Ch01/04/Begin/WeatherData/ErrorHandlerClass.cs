@@ -9,8 +9,6 @@ namespace Weather
 {
     public class ErrorHandlerClass
     {
-        public delegate void SendErrorMessageToDebugConsole(string message);
-
         public static void SendErrorMessageToDebugConsole1(string text)
         {
             Debug.WriteLine("!!! THIS IS SendErrorMessageToConsole1: " + text);

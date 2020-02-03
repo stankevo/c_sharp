@@ -5,6 +5,7 @@ using NFluent;
 using Weather;
 using System.Linq;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Tests_WeatherData
 {
@@ -52,8 +53,6 @@ namespace Tests_WeatherData
         [TestMethod]
         public void Test_030_ParseSampleText()
         {
-            ErrorHandlerClass.SendErrorMessageToDebugConsole errorHandler = ErrorHandlerClass.SendErrorMessageToDebugConsole1;
-
             using (var text = new StringReader(sampleData))
             {
                 text.ReadLine(); // ignore 1st line of text, it contains headers.
@@ -86,11 +85,9 @@ namespace Tests_WeatherData
             {
                 text.ReadLine(); // ignore 1st line of text, it contains headers.
 
-                // TODO: Implement WeatherData.ReadRange
+                var data = WeatherData.ReadRange(text, start, end, ErrorHandlerClass.SendErrorMessageToDebugConsole1);
 
-                //Check.That(data.Count()).IsEqualTo(6);
-                 
-                throw new NotImplementedException();
+                Check.That(data.Count()).IsEqualTo(6);
             }
         }
 
@@ -105,12 +102,41 @@ namespace Tests_WeatherData
                 text.ReadLine(); // ignore 1st line of text, it contains headers.
 
                 // Extract
+                var data = WeatherData.ReadRange(text, start, end, ErrorHandlerClass.SendErrorMessageToDebugConsole1);
                 // Transform
+                //Debug.Print("THIS IS MY DATA: " + data.ToString());
+                int length = data.Count();
+                var x = new double[length];
+                var y = new double[length];
+               // Debug.Print(data.ElementAt(1).ToString());
+                //for (int i=0; i<length; i++ )
+                //{
+                //    x[i] = data.ElementAt(i).TimeStamp.ToOADate();
+                //  //  Debug.Print(data.ElementAt(i).ToString());
+                //    y[i] = data.ElementAt(i).Barometric_Pressure;
+
+                //}
+
+                int i = 0;
+                foreach (var wo in data)
+                {
+                    x[i] = wo.TimeStamp.ToOADate();
+                    y[i] = wo.Barometric_Pressure;
+
+                    i++;
+
+                }
+                Debug.Print("ELEMENTS!: " + x[1] + " " + y[1]);
+
                 // Load
 
-                // MathNet.Numerics.Fit.Line(...);
-
-                throw new NotImplementedException();
+                //MathNet.Numerics.Fit.Line()
+                var res = MathNet.Numerics.Fit.Line(x, y);
+                Debug.Print("RESULT: " + res.ToString());
+                NFluent.Check.That(res.Item1).IsDistinctFrom(0);
+                NFluent.Check.That(res.Item2).IsDistinctFrom(0);
+                
+                //throw new NotImplementedException();
             }
         }
     }

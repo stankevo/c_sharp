@@ -14,7 +14,11 @@ namespace Weather
             DateTime? end = null,
             Action<string> errorHandler = null)
         {
-            throw new NotImplementedException();
+            var data = ReadAll(text, errorHandler);
+
+            var range = data.Where(item => (item.TimeStamp >= (start != null ? start : DateTime.MinValue)
+                                     && item.TimeStamp <= (end != null ? end : DateTime.MaxValue)));
+            return range;
         }
           
         public static IEnumerable<WeatherObservation> ReadAll(TextReader text, Action<string> errorHandler = null)
