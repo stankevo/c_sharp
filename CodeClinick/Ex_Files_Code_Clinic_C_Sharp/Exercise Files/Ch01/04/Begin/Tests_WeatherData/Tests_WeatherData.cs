@@ -101,43 +101,31 @@ namespace Tests_WeatherData
             {
                 text.ReadLine(); // ignore 1st line of text, it contains headers.
 
-                // Extract
-                var data = WeatherData.ReadRange(text, start, end, ErrorHandlerClass.SendErrorMessageToDebugConsole1);
-                // Transform
-                //Debug.Print("THIS IS MY DATA: " + data.ToString());
-                int length = data.Count();
-                var x = new double[length];
-                var y = new double[length];
-               // Debug.Print(data.ElementAt(1).ToString());
-                //for (int i=0; i<length; i++ )
-                //{
-                //    x[i] = data.ElementAt(i).TimeStamp.ToOADate();
-                //  //  Debug.Print(data.ElementAt(i).ToString());
-                //    y[i] = data.ElementAt(i).Barometric_Pressure;
+                var data = from wo in WeatherData.ReadRange(text, start, end, ErrorHandlerClass.SendErrorMessageToDebugConsole1) // extract
+                           select new // transform
+                           {
+                               Hours = (wo.TimeStamp - start).TotalHours,
+                               wo.Barometric_Pressure
+                           };
 
-                //}
+                var x = new List<double> ();
+                var y = new List<double> ();
 
-                int i = 0;
-                foreach (var wo in data)
+                // note: with this approach our data set is scanned only once
+                foreach (var item in data) // load
                 {
-                    x[i] = wo.TimeStamp.ToOADate();
-                    y[i] = wo.Barometric_Pressure;
-
-                    i++;
-
+                    x.Add(item.Hours);
+                    y.Add(item.Barometric_Pressure);
                 }
-                Debug.Print("ELEMENTS!: " + x[1] + " " + y[1]);
 
-                // Load
+                var (intersect, slope) = MathNet.Numerics.Fit.Line(x.ToArray(), y.ToArray()); // tuple
 
-                //MathNet.Numerics.Fit.Line()
-                var res = MathNet.Numerics.Fit.Line(x, y);
-                Debug.Print("RESULT: " + res.ToString());
-                NFluent.Check.That(res.Item1).IsDistinctFrom(0);
-                NFluent.Check.That(res.Item2).IsDistinctFrom(0);
-                
-                //throw new NotImplementedException();
+
+                Debug.Print("RESULT: intersect = " + intersect + "; slope = " + slope + ";");
+                Check.That(intersect).IsNotZero();
+                Check.That(slope).IsStrictlyLessThan(0);
+
             }
         }
     }
-}
+} 

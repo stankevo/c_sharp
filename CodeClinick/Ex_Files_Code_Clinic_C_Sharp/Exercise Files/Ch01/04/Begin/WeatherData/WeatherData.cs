@@ -16,9 +16,14 @@ namespace Weather
         {
             var data = ReadAll(text, errorHandler);
 
-            var range = data.Where(item => (item.TimeStamp >= (start != null ? start : DateTime.MinValue)
-                                     && item.TimeStamp <= (end != null ? end : DateTime.MaxValue)));
-            return range;
+            //var range = data.Where(item => (item.TimeStamp >= (start != null ? start : DateTime.MinValue)
+            //                         && item.TimeStamp <= (end != null ? end : DateTime.MaxValue)));
+            //return range;
+
+            return
+                ReadAll(text, errorHandler)
+                    .SkipWhile((wo) => wo.TimeStamp < (start ?? DateTime.MinValue))
+                    .TakeWhile((wo) => wo.TimeStamp <= (end ?? DateTime.MaxValue));
         }
           
         public static IEnumerable<WeatherObservation> ReadAll(TextReader text, Action<string> errorHandler = null)
