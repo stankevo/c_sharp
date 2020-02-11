@@ -37,5 +37,15 @@ namespace SearchConsoleApp
                 return -1;
             }
         }
+
+        public static int LinearSearch (int [] arr, int value)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == value)
+                    return i;
+            }
+            return -1;
+        }
     }
 }

@@ -7,11 +7,11 @@ namespace SearchConsoleAppTests
     [TestClass]
     public class BinarySearchTests
     {
-        public int[] a = new int[10] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
-        public int[] b = new int[2] { 0, 1 };
-        public int[] c = new int[3] { 1, 2, 3 };
-        public int[] d = new int[1] { 3 };
-        public int[] e = new int[3];
+        private int[] a = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+        private int[] b = { 0, 1 };
+        private int[] c = { 1, 2, 3 };
+        private int[] d = { 3 };
+        private int[] e = new int[3];
 
         [TestMethod]
         public void TestMethod1()
