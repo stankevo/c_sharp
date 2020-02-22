@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoggerClass;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,13 @@ namespace MonitorService2
 {
     public partial class CsMonitorEngine : ServiceBase
     {
+        private static System.Timers.Timer _timer;
+        private static Logger log = new Logger(Properties.Settings.Default.MonitorServiceDBConnectionString);
+
         public CsMonitorEngine()
         {
             InitializeComponent();
         }
-
-        private static System.Timers.Timer _timer;
 
         protected override void OnStart(string[] args)
         {
@@ -30,13 +32,20 @@ namespace MonitorService2
         private static void OntimedEvent(Object source, System.Timers.ElapsedEventArgs e)
         {
             // get the values and insert to DB
-            int cpuVlue = GetCpuValue();
-            int memoryValue = GetMemoryValue();
-            DateTime dt = DateTime.Now;
+            try
+            {
+                int cpuVlue = GetCpuValue();
+                int memoryValue = GetMemoryValue();
+                DateTime dt = DateTime.Now;
 
-            //DataSet1TableAdapters.DataCollectedTableAdapter adapter = new DataSet1TableAdapters.DataCollectedTableAdapter();
-            DataSet2TableAdapters.DataCollectedTableAdapter adapter = new DataSet2TableAdapters.DataCollectedTableAdapter();
-            adapter.InsertNewRecord(cpuVlue, memoryValue, dt);
+                DataSet2TableAdapters.DataCollectedTableAdapter adapter = new DataSet2TableAdapters.DataCollectedTableAdapter();
+                adapter.InsertNewRecord(cpuVlue, memoryValue, dt);
+            }
+            catch (Exception ex)
+            {
+                log.RecordException(ex);
+            }
+
         }
 
         private static int GetCpuValue()

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoggerClass;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace WindowsMonitoringEngine
     class Program
     {
         private static System.Timers.Timer _timer;
+        private static Logger log = new Logger(Properties.Settings.Default.MonitorServiceDBConnectionString);
 
         static void Main(string[] args)
         {
@@ -18,6 +20,18 @@ namespace WindowsMonitoringEngine
             _timer.AutoReset = true;
             _timer.Enabled = true;
 
+            //try
+            //{
+            //    var x = 0;
+            //    var y = 10;
+            //    var z = y / x;
+            //}
+            //catch (Exception ex)
+            //{
+            //    
+            //    log.RecordException(ex);
+            //}
+
             Console.WriteLine("The monitor is running...");
             Console.ReadLine();
         }
@@ -25,12 +39,19 @@ namespace WindowsMonitoringEngine
         private static void OntimedEvent(Object source, System.Timers.ElapsedEventArgs e)
         {
             // get the values and insert to DB
-            int cpuVlue = GetCpuValue();
-            int memoryValue = GetMemoryValue();
-            DateTime dt = DateTime.Now;
+            try
+            {
+                int cpuVlue = GetCpuValue();
+                int memoryValue = GetMemoryValue();
+                DateTime dt = DateTime.Now;
 
-            DataSet1TableAdapters.DataCollectedTableAdapter adapter = new DataSet1TableAdapters.DataCollectedTableAdapter();
-            adapter.InsertNewRecord(cpuVlue, memoryValue, dt);
+                DataSet1TableAdapters.DataCollectedTableAdapter adapter = new DataSet1TableAdapters.DataCollectedTableAdapter();
+                adapter.InsertNewRecord(cpuVlue, memoryValue, dt);
+            }
+            catch (Exception ex)
+            {
+                log.RecordException(ex);
+            }
         }
          
         private static int GetCpuValue()

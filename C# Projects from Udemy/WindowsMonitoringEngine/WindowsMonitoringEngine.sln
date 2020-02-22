@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsMonitoringEngine", "WindowsMonitoringEngine\WindowsMonitoringEngine.csproj", "{50DA41A8-33CD-4A48-855C-5000BF128634}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logger", "Logger\Logger.csproj", "{4DBA0427-FB85-41A0-BBCE-374A148C7D4E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIManager", "UIManager\UIManager.csproj", "{B37B7C1B-6692-45AE-92C5-637027D532BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorService2", "MonitorService2\MonitorService2.csproj", "{0BBF13B3-23DB-46E5-83F4-63DA2BE5D816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerClass", "LoggerClass\LoggerClass.csproj", "{3CF4C2A3-47A5-4A4D-AC4A-79AB7F459E22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{50DA41A8-33CD-4A48-855C-5000BF128634}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50DA41A8-33CD-4A48-855C-5000BF128634}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50DA41A8-33CD-4A48-855C-5000BF128634}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4DBA0427-FB85-41A0-BBCE-374A148C7D4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4DBA0427-FB85-41A0-BBCE-374A148C7D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4DBA0427-FB85-41A0-BBCE-374A148C7D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4DBA0427-FB85-41A0-BBCE-374A148C7D4E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B37B7C1B-6692-45AE-92C5-637027D532BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B37B7C1B-6692-45AE-92C5-637027D532BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B37B7C1B-6692-45AE-92C5-637027D532BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{0BBF13B3-23DB-46E5-83F4-63DA2BE5D816}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BBF13B3-23DB-46E5-83F4-63DA2BE5D816}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BBF13B3-23DB-46E5-83F4-63DA2BE5D816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF4C2A3-47A5-4A4D-AC4A-79AB7F459E22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF4C2A3-47A5-4A4D-AC4A-79AB7F459E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF4C2A3-47A5-4A4D-AC4A-79AB7F459E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF4C2A3-47A5-4A4D-AC4A-79AB7F459E22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
