@@ -1,6 +1,6 @@
 ﻿namespace MonitorService
 {
-    partial class Service1
+    partial class CsMonitorEngine
     {
         /// <summary> 
         /// Required designer variable.

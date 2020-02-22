@@ -8,11 +8,11 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MonitorService
+namespace MonitoringService
 {
-    public partial class Service1 : ServiceBase
+    public partial class CsMonitorService : ServiceBase
     {
-        public Service1()
+        public CsMonitorService()
         {
             InitializeComponent();
         }
