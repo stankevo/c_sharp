@@ -29,38 +29,53 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabMonitor = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dataCollectedBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new UIManager.DataSet1();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ıdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpuValueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.memValueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateTakenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonStart = new System.Windows.Forms.Button();
             this.labelStart = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabLogs = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataCollectedBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new UIManager.DataSet1();
+            this.ıdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpuValueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memValueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTakenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataCollectedTableAdapter = new UIManager.DataSet1TableAdapters.DataCollectedTableAdapter();
+            this.logsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.logsTableAdapter = new UIManager.DataSet1TableAdapters.LogsTableAdapter();
+            this.logIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.messageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ınnerExceptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sourceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.targetSiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stackTraceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateExDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.computerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonClearLogs = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabMonitor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataCollectedBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabLogs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataCollectedBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -104,61 +119,51 @@
             // 
             // chart2
             // 
-            chartArea3.AxisX.MajorGrid.LineWidth = 0;
-            chartArea3.AxisY.MajorGrid.LineWidth = 0;
-            chartArea3.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea3);
+            chartArea1.AxisX.MajorGrid.LineWidth = 0;
+            chartArea1.AxisY.MajorGrid.LineWidth = 0;
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
             this.chart2.DataSource = this.dataCollectedBindingSource;
-            legend3.Name = "Legend1";
-            this.chart2.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
             this.chart2.Location = new System.Drawing.Point(463, 284);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series3.BorderWidth = 5;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series3.IsVisibleInLegend = false;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            series3.XValueMember = "DateTaken";
-            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series3.YValueMembers = "MemValue";
-            this.chart2.Series.Add(series3);
+            series1.BorderWidth = 5;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.XValueMember = "DateTaken";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series1.YValueMembers = "MemValue";
+            this.chart2.Series.Add(series1);
             this.chart2.Size = new System.Drawing.Size(497, 300);
             this.chart2.TabIndex = 7;
             this.chart2.Text = "chart2";
             // 
-            // dataCollectedBindingSource
-            // 
-            this.dataCollectedBindingSource.DataMember = "DataCollected";
-            this.dataCollectedBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // chart1
             // 
-            chartArea4.AxisX.MajorGrid.LineWidth = 0;
-            chartArea4.AxisY.MajorGrid.LineWidth = 0;
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
+            chartArea2.AxisX.MajorGrid.LineWidth = 0;
+            chartArea2.AxisY.MajorGrid.LineWidth = 0;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
             this.chart1.DataSource = this.dataCollectedBindingSource;
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(463, 41);
             this.chart1.Name = "chart1";
-            series4.BorderWidth = 5;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.IsVisibleInLegend = false;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            series4.XValueMember = "DateTaken";
-            series4.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series4.YValueMembers = "CpuValue";
-            this.chart1.Series.Add(series4);
+            series2.BorderWidth = 5;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.IsVisibleInLegend = false;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.XValueMember = "DateTaken";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series2.YValueMembers = "CpuValue";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(497, 209);
             this.chart1.TabIndex = 6;
             this.chart1.Text = "chart1";
@@ -196,31 +201,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(443, 509);
             this.dataGridView1.TabIndex = 3;
             // 
-            // ıdDataGridViewTextBoxColumn
-            // 
-            this.ıdDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.ıdDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.ıdDataGridViewTextBoxColumn.Name = "ıdDataGridViewTextBoxColumn";
-            this.ıdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cpuValueDataGridViewTextBoxColumn
-            // 
-            this.cpuValueDataGridViewTextBoxColumn.DataPropertyName = "CpuValue";
-            this.cpuValueDataGridViewTextBoxColumn.HeaderText = "CpuValue";
-            this.cpuValueDataGridViewTextBoxColumn.Name = "cpuValueDataGridViewTextBoxColumn";
-            // 
-            // memValueDataGridViewTextBoxColumn
-            // 
-            this.memValueDataGridViewTextBoxColumn.DataPropertyName = "MemValue";
-            this.memValueDataGridViewTextBoxColumn.HeaderText = "MemValue";
-            this.memValueDataGridViewTextBoxColumn.Name = "memValueDataGridViewTextBoxColumn";
-            // 
-            // dateTakenDataGridViewTextBoxColumn
-            // 
-            this.dateTakenDataGridViewTextBoxColumn.DataPropertyName = "DateTaken";
-            this.dateTakenDataGridViewTextBoxColumn.HeaderText = "DateTaken";
-            this.dateTakenDataGridViewTextBoxColumn.Name = "dateTakenDataGridViewTextBoxColumn";
-            // 
             // buttonStart
             // 
             this.buttonStart.Location = new System.Drawing.Point(179, 20);
@@ -251,6 +231,8 @@
             // 
             // tabLogs
             // 
+            this.tabLogs.Controls.Add(this.buttonClearLogs);
+            this.tabLogs.Controls.Add(this.dataGridView2);
             this.tabLogs.Location = new System.Drawing.Point(4, 22);
             this.tabLogs.Name = "tabLogs";
             this.tabLogs.Padding = new System.Windows.Forms.Padding(3);
@@ -259,9 +241,131 @@
             this.tabLogs.Text = "Logs";
             this.tabLogs.UseVisualStyleBackColor = true;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.logIDDataGridViewTextBoxColumn,
+            this.messageDataGridViewTextBoxColumn,
+            this.ınnerExceptionDataGridViewTextBoxColumn,
+            this.sourceDataGridViewTextBoxColumn,
+            this.targetSiteDataGridViewTextBoxColumn,
+            this.stackTraceDataGridViewTextBoxColumn,
+            this.dateExDataGridViewTextBoxColumn,
+            this.computerNameDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.logsBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(7, 7);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(948, 511);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // dataCollectedBindingSource
+            // 
+            this.dataCollectedBindingSource.DataMember = "DataCollected";
+            this.dataCollectedBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ıdDataGridViewTextBoxColumn
+            // 
+            this.ıdDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.ıdDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.ıdDataGridViewTextBoxColumn.Name = "ıdDataGridViewTextBoxColumn";
+            this.ıdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cpuValueDataGridViewTextBoxColumn
+            // 
+            this.cpuValueDataGridViewTextBoxColumn.DataPropertyName = "CpuValue";
+            this.cpuValueDataGridViewTextBoxColumn.HeaderText = "CpuValue";
+            this.cpuValueDataGridViewTextBoxColumn.Name = "cpuValueDataGridViewTextBoxColumn";
+            // 
+            // memValueDataGridViewTextBoxColumn
+            // 
+            this.memValueDataGridViewTextBoxColumn.DataPropertyName = "MemValue";
+            this.memValueDataGridViewTextBoxColumn.HeaderText = "MemValue";
+            this.memValueDataGridViewTextBoxColumn.Name = "memValueDataGridViewTextBoxColumn";
+            // 
+            // dateTakenDataGridViewTextBoxColumn
+            // 
+            this.dateTakenDataGridViewTextBoxColumn.DataPropertyName = "DateTaken";
+            this.dateTakenDataGridViewTextBoxColumn.HeaderText = "DateTaken";
+            this.dateTakenDataGridViewTextBoxColumn.Name = "dateTakenDataGridViewTextBoxColumn";
+            // 
             // dataCollectedTableAdapter
             // 
             this.dataCollectedTableAdapter.ClearBeforeFill = true;
+            // 
+            // logsBindingSource
+            // 
+            this.logsBindingSource.DataMember = "Logs";
+            this.logsBindingSource.DataSource = this.dataSet1;
+            // 
+            // logsTableAdapter
+            // 
+            this.logsTableAdapter.ClearBeforeFill = true;
+            // 
+            // logIDDataGridViewTextBoxColumn
+            // 
+            this.logIDDataGridViewTextBoxColumn.DataPropertyName = "LogID";
+            this.logIDDataGridViewTextBoxColumn.HeaderText = "LogID";
+            this.logIDDataGridViewTextBoxColumn.Name = "logIDDataGridViewTextBoxColumn";
+            this.logIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // messageDataGridViewTextBoxColumn
+            // 
+            this.messageDataGridViewTextBoxColumn.DataPropertyName = "Message";
+            this.messageDataGridViewTextBoxColumn.HeaderText = "Message";
+            this.messageDataGridViewTextBoxColumn.Name = "messageDataGridViewTextBoxColumn";
+            // 
+            // ınnerExceptionDataGridViewTextBoxColumn
+            // 
+            this.ınnerExceptionDataGridViewTextBoxColumn.DataPropertyName = "InnerException";
+            this.ınnerExceptionDataGridViewTextBoxColumn.HeaderText = "InnerException";
+            this.ınnerExceptionDataGridViewTextBoxColumn.Name = "ınnerExceptionDataGridViewTextBoxColumn";
+            // 
+            // sourceDataGridViewTextBoxColumn
+            // 
+            this.sourceDataGridViewTextBoxColumn.DataPropertyName = "Source";
+            this.sourceDataGridViewTextBoxColumn.HeaderText = "Source";
+            this.sourceDataGridViewTextBoxColumn.Name = "sourceDataGridViewTextBoxColumn";
+            // 
+            // targetSiteDataGridViewTextBoxColumn
+            // 
+            this.targetSiteDataGridViewTextBoxColumn.DataPropertyName = "TargetSite";
+            this.targetSiteDataGridViewTextBoxColumn.HeaderText = "TargetSite";
+            this.targetSiteDataGridViewTextBoxColumn.Name = "targetSiteDataGridViewTextBoxColumn";
+            // 
+            // stackTraceDataGridViewTextBoxColumn
+            // 
+            this.stackTraceDataGridViewTextBoxColumn.DataPropertyName = "StackTrace";
+            this.stackTraceDataGridViewTextBoxColumn.HeaderText = "StackTrace";
+            this.stackTraceDataGridViewTextBoxColumn.Name = "stackTraceDataGridViewTextBoxColumn";
+            // 
+            // dateExDataGridViewTextBoxColumn
+            // 
+            this.dateExDataGridViewTextBoxColumn.DataPropertyName = "DateEx";
+            this.dateExDataGridViewTextBoxColumn.HeaderText = "DateEx";
+            this.dateExDataGridViewTextBoxColumn.Name = "dateExDataGridViewTextBoxColumn";
+            // 
+            // computerNameDataGridViewTextBoxColumn
+            // 
+            this.computerNameDataGridViewTextBoxColumn.DataPropertyName = "ComputerName";
+            this.computerNameDataGridViewTextBoxColumn.HeaderText = "ComputerName";
+            this.computerNameDataGridViewTextBoxColumn.Name = "computerNameDataGridViewTextBoxColumn";
+            // 
+            // buttonClearLogs
+            // 
+            this.buttonClearLogs.Location = new System.Drawing.Point(868, 538);
+            this.buttonClearLogs.Name = "buttonClearLogs";
+            this.buttonClearLogs.Size = new System.Drawing.Size(87, 23);
+            this.buttonClearLogs.TabIndex = 1;
+            this.buttonClearLogs.Text = "Clear Logs";
+            this.buttonClearLogs.UseVisualStyleBackColor = true;
+            this.buttonClearLogs.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -278,10 +382,13 @@
             this.tabMonitor.ResumeLayout(false);
             this.tabMonitor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataCollectedBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabLogs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataCollectedBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -307,6 +414,18 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource logsBindingSource;
+        private DataSet1TableAdapters.LogsTableAdapter logsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn logIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ınnerExceptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sourceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn targetSiteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stackTraceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateExDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn computerNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button buttonClearLogs;
     }
 }
 

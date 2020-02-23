@@ -21,6 +21,8 @@ namespace UIManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet1.Logs' table. You can move, or remove it, as needed.
+            this.logsTableAdapter.Fill(this.dataSet1.Logs);
             ServiceController service = new ServiceController("CsMonitorEngine2");
 
             labelStart.Text = service.Status.ToString();
@@ -46,7 +48,7 @@ namespace UIManager
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
-        {
+         {
             ServiceController service = new ServiceController("CsMonitorEngine2");
 
             if (labelStart.Text.ToLower() == "running")
@@ -72,6 +74,14 @@ namespace UIManager
                 buttonStart.Text = "Start";
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataSet1TableAdapters.LogsTableAdapter adapter = new DataSet1TableAdapters.LogsTableAdapter();
+            adapter.DeleteAllLogs();
+            MessageBox.Show("Logs are cleared.");
+            this.logsTableAdapter.Fill(this.dataSet1.Logs);
         }
     }
 }
