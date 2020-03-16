@@ -9,24 +9,29 @@ namespace MultiThreading_DivideAndConquer
 {
     class Program
     {
-        static int ArrLength = 500000;
+        static long ArrLength = 500000000;
         static byte[] arr = new byte[ArrLength];
-        const int ThreadsNum = 2;
+        static int ThreadsNum = Environment.ProcessorCount;
         static long[] results = new long[ThreadsNum+1];
+
+        static long intervalLength = ArrLength / ThreadsNum;
 
         static void Main(string[] args)
         {
             Console.WriteLine("Program started...");
-            Random random = new Random();
+            Console.WriteLine("Processors: " + ThreadsNum);
+            Random random = new Random(987);
 
             // initialize array
-            for (int i=0; i<ArrLength; i++)
+            Console.WriteLine("Initializing the array of {0} numbers...", ArrLength);
+            for (int i=0; i<arr.Length; i++)
             {
-                arr[i] = (byte)random.Next(100);
+                arr[i] = (byte)random.Next(10);
             }
-            Console.WriteLine("Big array created.");
+            Console.WriteLine("Initialization done.");
 
             // count sum in one thread
+            Console.WriteLine("Summing up in one thread...");
             var watch = System.Diagnostics.Stopwatch.StartNew();
             long res = sum(arr);
             watch.Stop();
@@ -34,20 +39,15 @@ namespace MultiThreading_DivideAndConquer
 
             Console.WriteLine("Total sum counted by one thread is {0}. Time: {1}.", res, elapsedTime.ToString());
 
-            // count via 4 threads
-            //watch.Restart();
+            // count via several threads threads
             var watch2 = System.Diagnostics.Stopwatch.StartNew();
             Thread[] threads = new Thread[ThreadsNum];
-            long intervalLength = ArrLength / ThreadsNum;
             
-            // start 4 threads
+            // start threads
             for (int i=0; i<ThreadsNum; i++)
             {
-                int n = i;
-                long start = n * intervalLength;
-                long end = n * intervalLength + intervalLength - 1;
-                threads[n] = new Thread(() => sumInThread(n, start, end));
-                threads[n].Start();
+                threads[i] = new Thread(SumYourPortion);
+                threads[i].Start(i);
             }
 
             //// calcuate sum of remaining part of array if exists
@@ -82,8 +82,9 @@ namespace MultiThreading_DivideAndConquer
 
             watch2.Stop();
             var elapsedTime2 = watch2.Elapsed;
-            Console.WriteLine("Total sum counted by 4 threads is {0}. Time: {1}.", res2, elapsedTime2.ToString());
+            Console.WriteLine("Total sum counted by {0} threads is {1}. Time: {2}.", ThreadsNum, res2, elapsedTime2.ToString());
 
+            Console.WriteLine("Press any key to close the program.");
             Console.ReadLine();
         }
 
@@ -105,8 +106,19 @@ namespace MultiThreading_DivideAndConquer
                 sum += arr[i];
             }
             results[threadId] = sum;
-            //Console.WriteLine("Thread {0} finished calculation and returned {1}", threadId, sum);
+        }
 
+        static void SumYourPortion(object portionNumber)
+        {
+            long sum = 0;
+            int k = (int)portionNumber;
+            long start = k * intervalLength;
+            long end = k * intervalLength + intervalLength;
+            for (long i = start; i < end; i++)
+            {
+                sum += arr[i];
+            }
+            results[k] = sum;
         }
     }
 }
