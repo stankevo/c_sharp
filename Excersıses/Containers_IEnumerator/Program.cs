@@ -35,7 +35,7 @@ namespace Containers_IEnumerator
                 // What if we didn't use yield return? - It's is not recommended.
                 // Anyway, if we do it, we would have to implement our own enumerator
                 // - the nested class MeEnumerator, that implements the IEnumerator<T> interface (see below).
-                
+
                 //return new MeEnumerator(this);
             }
 
@@ -68,7 +68,7 @@ namespace Containers_IEnumerator
                     throw new IndexOutOfRangeException();
             }
 
-            // this code is used only if we decide to not yse yield return in GetEnumerator().
+            // this code is used only if we decide to not use yield return in GetEnumerator().
             // Don't do like this!
             class MeEnumerator : IEnumerator<T>
             {
@@ -123,7 +123,7 @@ namespace Containers_IEnumerator
         static void Main(string[] args)
         {
             var myPartyAges = new MeList<int> { 25, 34, 32 }; //we can use the short-hand syntax, because MeList<int> implements IEnumerable<T>
-            foreach (int item in myPartyAges)
+            foreach (int item in myPartyAges) //we can use foreach loop, because MeList has GetEnumerator() method.
                 Console.WriteLine(item);
 
             // with Indexer (see above) it is also possible to reference items by index

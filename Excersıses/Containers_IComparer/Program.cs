@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Containers_IComparer
 {
     // This class is using the IComparable<T> interface
-    public class Cow : IComparable<Cow> 
+    public class Cow : IComparable<Cow>
     {
         public string Name { get; set; }
         public int Weight { get; set; }
