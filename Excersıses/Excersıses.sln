@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaExpressions_simpleLam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events_basic_observer_pattern", "Events_basic_observer_pattern\Events_basic_observer_pattern.csproj", "{7CD6D665-8DE3-41C6-9B01-A93AB87C2F33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events_EventHandler", "Events_EventHandler\Events_EventHandler.csproj", "{28028336-D60A-4701-8C1C-11DA338F9282}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritence", "Inheritence\Inheritence.csproj", "{FD2F2183-3303-490A-8B1A-C6C5EAB95B78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{7CD6D665-8DE3-41C6-9B01-A93AB87C2F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CD6D665-8DE3-41C6-9B01-A93AB87C2F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CD6D665-8DE3-41C6-9B01-A93AB87C2F33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28028336-D60A-4701-8C1C-11DA338F9282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28028336-D60A-4701-8C1C-11DA338F9282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28028336-D60A-4701-8C1C-11DA338F9282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28028336-D60A-4701-8C1C-11DA338F9282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD2F2183-3303-490A-8B1A-C6C5EAB95B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD2F2183-3303-490A-8B1A-C6C5EAB95B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD2F2183-3303-490A-8B1A-C6C5EAB95B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD2F2183-3303-490A-8B1A-C6C5EAB95B78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
