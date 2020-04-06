@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events_EventHandler", "Even
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritence", "Inheritence\Inheritence.csproj", "{FD2F2183-3303-490A-8B1A-C6C5EAB95B78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{47755066-968C-4B7F-9E9F-ECF253A9C135}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{FD2F2183-3303-490A-8B1A-C6C5EAB95B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD2F2183-3303-490A-8B1A-C6C5EAB95B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD2F2183-3303-490A-8B1A-C6C5EAB95B78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47755066-968C-4B7F-9E9F-ECF253A9C135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47755066-968C-4B7F-9E9F-ECF253A9C135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47755066-968C-4B7F-9E9F-ECF253A9C135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47755066-968C-4B7F-9E9F-ECF253A9C135}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

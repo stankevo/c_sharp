@@ -38,9 +38,7 @@ namespace MultiThreading_write_1_2_3_4
                     Console.WriteLine("Thred {0} is incremeting and writing {1}", Thread.CurrentThread.ManagedThreadId, i);
                     Thread.Sleep(1000);
                 }
-
             }
-            
         }
     }
 }
